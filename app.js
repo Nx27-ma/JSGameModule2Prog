@@ -87,24 +87,24 @@ class enemy {
             calc = Math.floor(Math.random() * 2);
             console.log(calc);
 
-            switch (calc, i) {
-                case (calc === 0 && i === 0):
-                    tempLoc = Math.floor(Math.random() * boundingBox[0] + boundingBox[0]);
-                    this.enemyPos[0] = tempLoc + hitBox[0];
-                    break;
-                case (calc === 1 && i === 0):
-                    tempLoc = Math.floor(Math.random() * boundingBox[0] + boundingBox[0]);
-                    this.enemyPos[0] = tempLoc + hitBox[0];
-                    break;
-                case (calc === 0 && i === 1):
-                    tempLoc = Math.floor(Math.random() * boundingBox[1] + boundingBox[1]);
-                    this.enemyPos[1] = tempLoc + hitBox[1];
-                    break;
-                case (calc === 1 && i === 1):
-                    tempLoc = Math.floor(Math.random() * boundingBox[1] + boundingBox[1]);
-                    this.enemyPos[1] = tempLoc + hitBox[1];
-                    break;
+            
+            if (calc === 0 && i === 0) {
+                tempLoc = Math.floor(Math.random() * boundingBox[0] + boundingBox[0]);
+                this.enemyPos[0] = tempLoc + hitBox[0];
             }
+            else if (calc === 1 && i === 0) {
+                tempLoc = Math.floor(Math.random() * boundingBox[0] + boundingBox[0]);
+                this.enemyPos[0] = tempLoc + hitBox[0];
+            }
+            else if (calc === 0 && i === 1) {
+                tempLoc = Math.floor(Math.random() * boundingBox[1] + boundingBox[1]);
+                this.enemyPos[1] = tempLoc + hitBox[1];
+            }
+            else if (calc === 1 && i === 1) {
+                tempLoc = Math.floor(Math.random() * boundingBox[1] + boundingBox[1]);
+                this.enemyPos[1] = tempLoc + hitBox[1];
+            }
+            
             
         }
         console.log(this.enemyPos);
